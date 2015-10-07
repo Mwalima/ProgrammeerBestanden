@@ -53,22 +53,20 @@ div.thumbs {
     margin: 30px;	
 }
 
-.bigImage img{
-    position: absolute;
+.bigImage {
     margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 0%;
+    margin-bottom: 0%;
 
 }
 
 
-.arrow img{    
-    position: absolute;     
+.arrow img {    
     border-color:transparent;
-    margin-top: 40%;
-    margin-left:80%;
+    //margin-top: 40%;
+    margin-left:40%;
 }
 
 body  {
