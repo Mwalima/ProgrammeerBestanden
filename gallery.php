@@ -19,7 +19,7 @@ require_once './DBConnect.class.php';
             if ($_POST["idSubmitImage"] > 14) {
                 $id = $gallery['id'] = 0;
                 $gallery['img'] = "img/Jaan-Mobach-2keivormen1.JPG";
-                echo "<div class='arrow'><a href='frontpage.php'><h2>Terug Naar het begin</h2></a></div>";
+                echo "<div class='arrow'><a href='index.php'><img src='icon-home.png' width='128' heigth='128'></a></div>";
             } else {
                 $id = $_POST["idSubmitImage"];
             }
@@ -32,8 +32,8 @@ require_once './DBConnect.class.php';
 
         $result = "<div class='thumbs'><form action='gallery.php' method='post'>";
         $result .= "<input type='hidden' name='idSubmitImage' value='" . $gallery['id'] . "'>";
-        $result .= "<button type='submit' name='ImageSubmit'value='" . $gallery['img'] . "'><div class='bigImage'><img src='" . $gallery['img'] . "' ></div><div class='arrow'><img src='arrow.png' ></div></button>";
-        $result .= "</form></div>";
+        $result .= "<div class='bigImage'><button type='submit' name='ImageSubmit'value='" . $gallery['img'] . "'><img src='" . $gallery['img'] . "' ><img src='arrow.png' ></button>";
+        $result .= "</div></form></div>";
         echo $result;
         ?>		
     </body>
