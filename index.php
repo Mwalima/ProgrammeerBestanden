@@ -25,8 +25,26 @@ foreach ($thumbs as $thumb) {
         <link rel="stylesheet" type="text/css" href="opmaak.css">
     </head>
     <body>
-        <?php
-        echo $frames;
-        ?>		
+        <?php 
+        
+       $i = 0;
+        $frames = "";
+foreach ($thumbs as $thumb) {
+    $frames .= $thumb->showFrame();
+    if ($i % 3 === 0) {
+            echo '</tr><tr>';
+        }
+      echo "<td>" . $frames . "</td>";
+      $i++;
+    
+}
+
+   
+      
+  
+
+
+        ?>
+              		
     </body>
 </html>
